@@ -1,0 +1,39 @@
+{% extends 'body.html' %} {% block body %}
+
+<h1>Collected Data</h1>
+
+<table class="table table-striped table-hover" id="data_table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Component Group</th>
+            <th>Component Name</th>
+            <th>Component Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for data in data_list %}
+        <tr>
+            <td class="serial">{{ data['#'] }}</td>
+            <td class="cg">{{ data['component_group'] }}</td>
+            <td class="cn">{{ data['component_name'] }}</td>
+            <td class="cc">{{ data['component_count'] }}</td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+</table>
+
+</br>
+
+<h1>Visualization in d3</h1>
+
+<div id="viz">
+
+</div>
+
+{% endblock %} {% block script %}
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'body.html' %} {% block body %}
+
+
+<h1>Hi {{name}}</h1>
+
+<h2>Instructions for you: </h2>
+
+</br>
+
+<ul class="large-list">
+    <li>Edit the <b>asked</b> portion of <code>app.py</code> file <b>only</b>.
+        <ul>
+            </br>
+            <li>You have to implement a <code>GET</code> request to get <code>{{ parameters }}</code> values from URL.</li>
+            </br>
+            <li>To implement the argument parsing code, please study the given slides and <code>flask</code> documentation.</li>
+        </ul>
+    </li>
+    </br>
+    <li>Browse to <code>/reset</code> route to reset the added data.</li>
+    </br>
+    <li>Browse to <code>/view_data</code> route to view the added data.</li>
+    </br>
+    <li>After implementing the <code>GET</code> request successfully, please make <b>4</b> or <b>MORE</b> requests such that following information are shown in visualization.
+        </br>
+
+        <img src="{{ image_url }}" alt="">
+    </li>
+    </br>
+    <li>After completing the assignment deploy the app in <code><a href="http://www.pythonanywhere.com/" target="_blank">pythonanywhere</a></code></li>
+</ul>
+
+</br>
+
+<h2>Best of luck on completing the assignment!</h2>
+
+</br>
+
+<h1>Resources</h1>
+
+</br>
+
+<ol class="large-list">
+    <li>
+        <a href="https://www.youtube.com/watch?v=27Fjrlx4s-o
+" target="_blank">Flask Routing Video Tutorial</a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=PWF_WyvgKqY">Flask HTTP Methods</a>
+    </li>
+    <li>
+        <a href="https://www.youtube.com/watch?v=t3yHNZhSXLE">Templating in Python</a>
+    </li>
+</ol>
+
+{% endblock %}
